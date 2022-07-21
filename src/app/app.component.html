@@ -1,0 +1,11 @@
+<h1>Hello</h1>
+<button type="button" (click)="formShown = !formShown">Toggle form</button>
+<form clrForm *ngIf="formShown">
+  <clr-date-container>
+    <input type="date" [(clrDate)]="date" />
+  </clr-date-container>
+  {{ date | date }}
+</form>
+{{ dynamicLocaleId.currentLang }}
+<button type="button" (click)="dynamicLocaleId.currentLang = 'en'">English</button>
+<button type="button" (click)="dynamicLocaleId.currentLang = 'de-AT'">German</button>
